@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senior & Junior Roles</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/jpg" href="Logo.jpg" />
+    <link rel="icon" type="imag/jpg" href="/image/Logo.jpg"
+</head>
+<nav class="navbar">
+    <a href="index.html" target="_blank">Home</a>
+    <a href="login.html" target="_blank">Log-In</a>
+    <a href="signup.html" target="_blank">Sign-Up</a>
+    <a href="about_us.html" target="_blank">About Us</a>
+    <!-- <a href="major.html" target="_blank">Majorie</a> -->
+    </nav>
+<body>
+    <div class="container">
+        <h1>Senior & Junior Roles in the Mentorship Program</h1>
+
+        <h2>What is a Senior?</h2>
+        <p>
+            A <strong>Senior</strong> is an experienced individual who guides and supports a <strong>Junior</strong> in their academic, professional, or personal development. Seniors are typically students or professionals who have already gone through the challenges that Juniors are currently facing.
+        </p>
+        <h3>Responsibilities of a Senior:</h3>
+        <ul>
+            <li>Provide guidance and mentorship to Juniors.</li>
+            <li>Share knowledge, resources, and experiences.</li>
+            <li>Help Juniors set and achieve their goals.</li>
+            <li>Offer advice on academic and career decisions.</li>
+            <li>Encourage and motivate Juniors to overcome challenges.</li>
+        </ul>
+
+        <h2>What is a Junior?</h2>
+        <p>
+            A <strong>Junior</strong> is someone who seeks guidance and support from a <strong>Senior</strong>. Juniors are typically students or early-career professionals who are looking to learn and grow with the help of a mentor.
+        </p>
+        <h3>Responsibilities of a Junior:</h3>
+        <ul>
+            <li>Actively seek advice and guidance from Seniors.</li>
+            <li>Be open to learning and feedback.</li>
+            <li>Set clear goals and work towards achieving them.</li>
+            <li>Respect the time and effort of the Senior.</li>
+            <li>Communicate regularly and honestly with the Senior.</li>
+        </ul>
+
+        <h2>Why Join as a Senior or Junior?</h2>
+        <p>
+            Whether you're a <strong>Senior</strong> or a <strong>Junior</strong>, participating in the mentorship program offers numerous benefits:
+        </p>
+        <ul>
+            <li><strong>For Seniors:</strong> Develop leadership skills, give back to the community, and enhance your resume.</li>
+            <li><strong>For Juniors:</strong> Gain valuable insights, build confidence, and accelerate your personal and professional growth.</li>
+        </ul>
+        <form id="mentorshipForm">
+      
+        
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <title>Role Selection</title>
+            </head>
+            <body>
+                <form id="roleForm">
+                    <label for="role">I want to be a:</label><br>
+                    <select id="role" name="role">
+                        <option value="Senior">Senior</option>
+                        <option value="Junior">Junior</option>
+                    </select><br><br>
+                    
+                    <input type="button" value="Submit" onclick="checkRole()">
+                </form>
+            
+                <script>
+                    function checkRole() {
+                       
+                        var role = document.getElementById("role").value;
+                        
+                       
+                        if (role == "Junior") {
+                            
+                            window.location.href = "https://drive.google.com/drive/folders/1xJ_gDpsA0Cxcn9KAfBTcWbSko0L6CJzE?usp=sharing";
+                        } else {
+                            
+                            window.location.href = "https://drive.google.com/drive/folders/1ABnvimKzCBRYpQqF4R6pdxxtWOPJLgFV?usp=sharing"; // Replace with your senior link
+                        }
+                    }
+                </script>
+            </body>
+            </html>
+        <div class="message" id="confirmationMessage" style="display:none;"></div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 Peer Mentorship Program | Your College Name</p>
+    </footer>
+    
+    <script>
+        document.getElementById('mentorshipForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const role = document.getElementById('role').value;
+    
+            
+            const formData = { Name: name, Email: email, Role: role };
+            localStorage.setItem('mentorshipData', JSON.stringify(formData));
+    
+            console.log(formData);
+            document.getElementById('confirmationMessage').innerText = "Thank you for your submission!";
+            document.getElementById('confirmationMessage').style.display = "block";
+        });
+    </script>
+
+        <p style="text-align: center;">
+            <a href="index.html" class="btn">Back to Home</a>
+        </p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Peer Mentorship Program | AAST </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Majorie</title>
+    <link rel="stylesheet" href="std.css" />
+    <link rel="icon" type="image/jpg" href="Logo.jpg" />
+    <link rel="icon" type="imag/jpg" href="/image/Logo.jpg" />
+  </head>
+  <body>
+    <div class="Login_h1">
+      <nav class="navbar">
+        <a href="index.html" target="_blank">Home</a>
+        <a href="login.html" target="_blank">Log-In</a>
+        <a href="signup.html" target="_blank">Sign-Up</a>
+        <a href="about_us.html" target="_blank">About Us</a>
+      </nav>
+    </div>
+    <h1>Welcome to Majorie</h1>
+    <h3>Where You Can Choose Which Major You Excel In</h3>
+    <form name="MajorSelector">
+      <fieldset>
+        <legend>Student Details</legend>
+        <div>
+          <label for="a">Name : </label>
+          <input
+            id="a"
+            type="text"
+            class="form-control"
+            placeholder="Ex. Yasser Mohamed"
+            required
+          />
+        </div>
+        <br />
+        <div>
+          <label for="b">ID : </label>
+          <input
+            id="b"
+            type="number"
+            class="form-control"
+            placeholder="Ex. 123456789"
+            maxlength="14"
+            required
+          />
+        </div>
+        <br />
+        <div>
+          <label for="c">GPA : </label>
+          <input
+            id="c"
+            type="number"
+            class="form-control"
+            step="0.1"
+            min="0"
+            max="4"
+            maxlength="3"
+            placeholder="Ex. 3.3"
+            required
+          />
+        </div>
+        <br />
+        <div>
+          <label for="d">E-mail</label>
+          <input id="d" type="email" class="form-control" value="@gmail.com" />
+        </div>
+        <br />
+        <div>
+          <label for="p">Programs : </label>
+          <input
+            id="p"
+            list="OP"
+            class="form-control"
+            placeholder="Ex. Computer Science"
+            required
+          />
+          <datalist id="OP">
+            <option value="Adminstrative Sciences"></option>
+            <option value="Al-Alsun & Applied Languages"></option>
+            <option value="Archaeology & Cultural Heritage"></option>
+            <option value="Architecture"></option>
+            <option value="Art & Design"></option>
+            <option value="Artificial Intelligence"></option>
+            <option value="Basic Science"></option>
+            <option value="Biotechnology"></option>
+            <option value="Business"></option>
+            <option value="Business Information System"></option>
+            <option value="Computer Engineering"></option>
+            <option value="Computer Science"></option>
+            <option value="Community Sciences"></option>
+            <option value="Desert Agriculture"></option>
+            <option value="Economics & Political Science"></option>
+            <option value="Energy & Environmental Engineering"></option>
+            <option value="Engineering"></option>
+            <option value="Filmmaking & Performing Arts"></option>
+            <option value="Fisheries & Aquaculture Technology"></option>
+            <option value="Global Affairs & Public Policy"></option>
+            <option value="Humanities & Social Science"></option>
+            <option value="International Transport & Logistics"></option>
+            <option value="Law"></option>
+            <option value="Maritime Transport & Technology"></option>
+            <option value="Mass Communications"></option>
+            <option value="Medicine"></option>
+            <option value="Media"></option>
+            <option value="Nursing"></option>
+            <option value="Oral & Dental Medicine"></option>
+            <option value="Pharmacy"></option>
+            <option value="Physical Therapy"></option>
+            <option value="Technological Industries"></option>
+            <option value="Technical & Vocational"></option>
+            <option value="Tourism & Hospitality"></option>
+            <option value="Veterinary Medicine"></option>
+          </datalist>
+        </div>
+        <br />
+        <button type="reset" onclick="hide()">Remove</button>
+        <button type="submit" id="mainbtn">Submit</button>
+      </fieldset>
+    </form>
+
+    <!-- Section to display skills and grading options -->
+    <div class="skills-section" id="skillsSection">
+      <h3>Top 3 Skills for Your Program:</h3>
+      <div id="skillsContainer"></div>
+      <button type="button" onclick="calculateResults()">
+        Calculate Results
+      </button>
+    </div>
+
+    <!-- Section to display the result -->
+    <div class="result-section" id="resultSection">
+      <h3>Result:</h3>
+      <p id="resultText"></p>
+    </div>
+
+    <script src="new.js"></script>
+  </body>
+</html>
